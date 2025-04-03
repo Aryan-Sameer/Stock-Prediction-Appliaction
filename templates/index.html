@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Analysis</title>
+    <style>
+        body {
+            font-family: "arial"
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            padding: 25px 45px;
+            margin: 0 auto;
+            width: 40%;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        hr {
+            margin: 40px 0;
+        }
+
+        input {
+            width: 97.5%;
+            padding: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px;
+        }
+
+        .tickers ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .tickers ul li {
+            margin: 4px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Stock Market Analysis</h1>
+    <div class="container">
+        <form action="/analyse" method="post">
+            <div>
+                <label for="ticker">Stock Ticker:</label>
+                <input type="text" id="ticker" name="ticker" required>
+            </div>
+            <br>
+            <div>
+                <label for="period">Period:</label>
+                <select id="period" name="period">
+                    <option value="1mo">1 Month</option>
+                    <option value="3mo">3 Months</option>
+                    <option value="6mo">6 Months</option>
+                    <option value="1y">1 Year</option>
+                </select>
+            </div>
+            <br>
+            <button type="submit">Analyze</button>
+        </form>
+        <hr>
+        <div class="tickers">
+            <h3>Ticker Symbols (reference)</h3>
+            <ul>
+                <li>Meta: META</li>
+                <li>Amazon: AMZN</li>
+                <li>Apple: AAPL</li>
+                <li>Netflix: NFLX</li>
+                <li>NVIDIA: NVDA</li>
+                <li>Google Class A shares: GOOGL</li>
+                <li>Google Class C shares: GOOG</li>
+                <li>JPMorgan Chase & Co.: JPM</li>
+                <li>Microsoft: MSFT</li>
+                <li>Tesla: TSLA</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
